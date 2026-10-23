@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #313338;
+  color: #dbdee1;
+  overflow: hidden;
+  font-family: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+    "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Discord-style custom scrollbars */
+.scrollbar-discord {
+  scrollbar-width: thin;
+  scrollbar-color: #1a1b1e transparent;
+}
+
+.scrollbar-discord::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollbar-discord::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+.scrollbar-discord::-webkit-scrollbar-thumb {
+  background-color: #1a1b1e;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.scrollbar-discord:hover::-webkit-scrollbar-thumb {
+  background-color: #202225;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.scrollbar-discord::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+/* Keeps the chat feed from shifting when the scrollbar appears */
+.scrollbar-gutter-stable {
+  scrollbar-gutter: stable;
+}
